@@ -1,0 +1,3858 @@
+{
+	"info": {
+		"_postman_id": "1ce1cf9a-915d-401a-9aa6-674fc3682377",
+		"name": "Mukthi Live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test1@example.com\",\r\n    \"password\":\"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "{{LIVE URL}}login",
+					"host": [
+						"{{LIVE URL}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{LIVE URL}}detail",
+					"host": [
+						"{{LIVE URL}}detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favourite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"13\",\r\n    \"favourite\":\"2,4\"\r\n}"
+				},
+				"url": {
+					"raw": "{{LIVE URL}}favourite",
+					"host": [
+						"{{LIVE URL}}favourite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}category",
+					"host": [
+						"{{LIVE URL}}category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kumar\",\r\n    \"gender\":\"\",\r\n    \"email\":\"syef12345@gmail.com\",\r\n    \"password\":\"demo1234\",\r\n    \"dob\":\"\",\r\n    \"phone\":\"8807446505\"\r\n}"
+				},
+				"url": {
+					"raw": "{{LIVE URL}}register",
+					"host": [
+						"{{LIVE URL}}register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainder Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"event_name\":\"birthday celeberation\",\r\n    \"event_description\":\"dec 20 doctor birthday\",\r\n    \"start_date\":\"2020-12-20\",\r\n    \"end_date\":\"2020-12-20\",\r\n    \"start_time\":\"10:00 AM\",\r\n    \"end_time\":\"05:00 PM\",\r\n    \"type\":\"memory\"\r\n}"
+				},
+				"url": {
+					"raw": "{{LIVE URL}}remainder/update/3",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sudhakar\",\r\n    \"gender\":\"1\",\r\n    \"email\":\"sudhakar@gmail.com\",\r\n    \"dob\":\"2020-12-12\",\r\n    \"phone\":\"8885554587\",\r\n    \"streetaddress\":\"3151,East 3rd street,pudukkottai-622001\"\r\n}"
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/update/1",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainders list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}remainder/list?type=schedule&index=0&count=10000",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "schedule"
+						},
+						{
+							"key": "index",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainders edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}remainder/edit/1",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"edit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainders Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}remainder/delete/2",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files[]",
+							"type": "file",
+							"src": "/C:/Users/Admin/Pictures/Untitled.png",
+							"disabled": true
+						},
+						{
+							"key": "nominee_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "document_content",
+							"value": "testing auth",
+							"type": "text"
+						},
+						{
+							"key": "document_name",
+							"value": "Home details",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/document/add",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"document",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"document_content\":\"for testing purpose\",\r\n    \"nominee_id\":\"6\",\r\n    \"security_question\":\"Hi there?\",\r\n    \"security_answer\":\"Hello\",\r\n    \"document_name\":\"Welcome\"\r\n}"
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/document/update/37",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"document",
+						"update",
+						"37"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}nominee/document/36",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"document",
+						"36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}nominee/document/list",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"document",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Package list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}package/list",
+					"host": [
+						"{{LIVE URL}}package"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User current Package",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}user/package",
+					"host": [
+						"{{LIVE URL}}user"
+					],
+					"path": [
+						"package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ELCOT/Downloads/food/tomatorice.jpg"
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/D:/R16/01 Getting Started/003 Real-World SPAs & React Web Apps.mp4"
+						},
+						{
+							"key": "title",
+							"value": "feb test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "testing content",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "1,3,4,5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/create",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "49",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "dislike",
+							"description": "like,dislike",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/like",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "follower_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}user/follow",
+					"host": [
+						"{{LIVE URL}}user"
+					],
+					"path": [
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "Test Notification",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/comment",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}post/comment/list?id=11",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"comment",
+						"list"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unfollow",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "follower_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}user/unfollow",
+					"host": [
+						"{{LIVE URL}}user"
+					],
+					"path": [
+						"unfollow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}post/list?index=0",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Relationship lists",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cudGVjaGNtYW50aXguaW5cL211a3RoaVwvYXBpXC9sb2dpbiIsImlhdCI6MTYxNDYwMDI0NiwiZXhwIjoxNjE0Njg2NjQ2LCJuYmYiOjE2MTQ2MDAyNDYsImp0aSI6IlR1ZFlpdzdtbFhKRzdRVHIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ZS-WP7G6mkX4ff1iAgjfr90RpuDG1Nn6-nxpPx6rs2U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}relationship/list",
+					"host": [
+						"{{LIVE URL}}relationship"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainders Notification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}remainder/notification",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attachment Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document_id",
+							"value": "27",
+							"type": "text"
+						},
+						{
+							"key": "files[]",
+							"type": "file",
+							"src": [
+								"/C:/Users/ELCOT/Downloads/food/var_rice.jpg",
+								"/C:/Users/ELCOT/Downloads/food/varie_dosa.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}attachment/add",
+					"host": [
+						"{{LIVE URL}}attachment"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attachment Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}attachment/delete/47",
+					"host": [
+						"{{LIVE URL}}attachment"
+					],
+					"path": [
+						"delete",
+						"47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainder Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "event_name",
+							"value": "Birthday",
+							"type": "text"
+						},
+						{
+							"key": "event_description",
+							"value": "siva birthday",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "2021-08-13",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2021-08-13",
+							"type": "text"
+						},
+						{
+							"key": "start_time",
+							"value": "08:37 AM",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "08:37 AM",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "schedule",
+							"type": "text"
+						},
+						{
+							"key": "schedule_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ELCOT/Downloads/food/tomatoes-close-up.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}remainder/create",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainders Image Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ELCOT/Downloads/food/tandoori.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}remainder/image/update/45",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"image",
+						"update",
+						"45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainders Image Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}remainder/image/delete/45",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"image",
+						"delete",
+						"45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Profile Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/profile/delete/18",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"profile",
+						"delete",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Profile Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profile",
+							"type": "file",
+							"src": "/C:/Users/ELCOT/Downloads/food/banner3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/profile/update/18",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"profile",
+						"update",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "nandhu",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nandhusdfsdfs@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2021-02-05",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "8887774445",
+							"type": "text"
+						},
+						{
+							"key": "streetaddress",
+							"value": "9/5, T. Nagar, Chennai",
+							"type": "text"
+						},
+						{
+							"key": "dob_memory",
+							"value": "on",
+							"type": "text"
+						},
+						{
+							"key": "relationship",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "profile",
+							"type": "file",
+							"src": "/C:/Users/ELCOT/Downloads/food/240313.jpg"
+						},
+						{
+							"key": "special_date",
+							"value": "2021-02-05",
+							"type": "text"
+						},
+						{
+							"key": "about_specialdate",
+							"value": "Test about somthing special",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/create",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}nominee/4",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/list/?index=0&count=35&searchterm=",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"list",
+						""
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "35"
+						},
+						{
+							"key": "searchterm",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/delete/6",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"delete",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Send Otp",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nominee_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "mobile",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/sendOtp",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"sendOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Resend OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nominee_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "mobile",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/resendOtp",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"resendOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Verify OTP",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nominee_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "4444",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "mobile",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/verifyOtp",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"verifyOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Document Delete OTP Request",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nominee_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "document_id",
+							"value": "37",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/document/deleteotp",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"document",
+						"deleteotp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Document Delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nominee_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "document_id",
+							"value": "37",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "RRg4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}nominee/document/delete",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"document",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access With Social Media",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "media",
+							"value": "gmail",
+							"type": "text"
+						},
+						{
+							"key": "social_id",
+							"value": "7897897897834534",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "SYED",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ASDFASDFASDF@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}accesswithsocial",
+					"host": [
+						"{{LIVE URL}}accesswithsocial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Social Register Confirmation",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cudGVjaGNtYW50aXguaW5cL211a3RoaVwvYXBpXC9sb2dpbiIsImlhdCI6MTYyMjQ3MDY4NCwiZXhwIjoxNjIyNjg2Njg0LCJuYmYiOjE2MjI0NzA2ODQsImp0aSI6IjZjdFFiSGJIbnFMbExKZkwiLCJzdWIiOjEzLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.pKBIfvNjU1KIesx7kmEimOX6YqjC42UtcobnqE4Vuf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "108",
+							"type": "text"
+						},
+						{
+							"key": "social_id",
+							"value": "7897897897834534",
+							"type": "text"
+						},
+						{
+							"key": "mobileno",
+							"value": "8807446505",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}social_registerconfirmation",
+					"host": [
+						"{{LIVE URL}}social_registerconfirmation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Social Register Complete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "108",
+							"type": "text"
+						},
+						{
+							"key": "social_id",
+							"value": "7897897897834534",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "4444",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}social_registercomplete",
+					"host": [
+						"{{LIVE URL}}social_registercomplete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Front Register Confirmation",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "35",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "8807446505",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}registerconfirmation",
+					"host": [
+						"{{LIVE URL}}registerconfirmation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Front Register Complete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "35",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "4444",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}registercomplete",
+					"host": [
+						"{{LIVE URL}}registercomplete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sample S",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test1@example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "8807446505",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}profile_update",
+					"host": [
+						"{{LIVE URL}}profile_update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Pic Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profilepic",
+							"type": "file",
+							"src": "/C:/Users/Admin/Pictures/Untitled.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}profilepic_update",
+					"host": [
+						"{{LIVE URL}}profilepic_update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Forgetpassword",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email_mobile",
+							"value": "test1@example.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}forgerpassword",
+					"host": [
+						"{{LIVE URL}}forgerpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Verify OTP",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "4444",
+							"type": "text"
+						},
+						{
+							"key": "verifyby",
+							"value": "mobile",
+							"description": "mobile/email",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}verifyotp",
+					"host": [
+						"{{LIVE URL}}verifyotp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Reset Password",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "verifyby",
+							"value": "email",
+							"description": "mobile/email",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}resetpassword",
+					"host": [
+						"{{LIVE URL}}resetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DASHBOARD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}dashboard",
+					"host": [
+						"{{LIVE URL}}dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follower List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}user/followerlist",
+					"host": [
+						"{{LIVE URL}}user"
+					],
+					"path": [
+						"followerlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Following List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}user/followinglist",
+					"host": [
+						"{{LIVE URL}}user"
+					],
+					"path": [
+						"followinglist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follower Dashboard",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"follower_id\":6\r\n}"
+				},
+				"url": {
+					"raw": "{{LIVE URL}}followerdashboard",
+					"host": [
+						"{{LIVE URL}}followerdashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favourite List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}favourite/list",
+					"host": [
+						"{{LIVE URL}}favourite"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}changepassword",
+					"host": [
+						"{{LIVE URL}}changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}post/25",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "test update",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Test Description",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/update",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reminder List  ( Prev and Net )",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}remainder/prenextlist?lifeline_id=148&type=schedule",
+					"host": [
+						"{{LIVE URL}}remainder"
+					],
+					"path": [
+						"prenextlist"
+					],
+					"query": [
+						{
+							"key": "lifeline_id",
+							"value": "148"
+						},
+						{
+							"key": "type",
+							"value": "schedule"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read A Doc",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}nominee/document/readadoc",
+					"host": [
+						"{{LIVE URL}}nominee"
+					],
+					"path": [
+						"document",
+						"readadoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post / Answer Report",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Test Report content",
+							"type": "text"
+						},
+						{
+							"key": "reason",
+							"value": "1",
+							"description": "1 Inappropriate Content,2 Harmful/Hateful Speech,3 Violent Content,4 Threatening Content, 5 Spam/Misleading, 6 Other",
+							"type": "text"
+						},
+						{
+							"key": "otherreason",
+							"value": "",
+							"description": "if reason 6 its required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/report",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}post/delete/12",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"delete",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Banner (Post) Count Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "banner_id",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "view",
+							"description": "click,view",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/countupdate",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"countupdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment / Answer Delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}post/comment/destroy/91",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"comment",
+						"destroy",
+						"91"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment / Answer Report",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "comment_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Fresh report Content",
+							"type": "text"
+						},
+						{
+							"key": "reason",
+							"value": "1",
+							"description": "1 Inappropriate Content,2 Harmful/Hateful Speech,3 Violent Content,4 Threatening Content, 5 Spam/Misleading, 6 Other",
+							"type": "text"
+						},
+						{
+							"key": "otherreason",
+							"value": "",
+							"description": "if reason 6 its required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/comment/report",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"comment",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment / Answer Like & Dislike",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "comment_id",
+							"value": "142",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "dislike",
+							"description": "like,dislike",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}post/comment/likedislike",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"comment",
+						"likedislike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}city",
+					"host": [
+						"{{LIVE URL}}city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FCM Device Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "device",
+							"value": "device_12456",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}fcmtoken",
+					"host": [
+						"{{LIVE URL}}fcmtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device SignOut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "device",
+							"value": "device_12456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}devicesignout",
+					"host": [
+						"{{LIVE URL}}devicesignout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Mukthi",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "Test Notification",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}sendnotification",
+					"host": [
+						"{{LIVE URL}}sendnotification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Birthday",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}birthday",
+					"host": [
+						"{{LIVE URL}}birthday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tomorrow Special Day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}tomspecialday",
+					"host": [
+						"{{LIVE URL}}tomspecialday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remind Today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}remindtoday",
+					"host": [
+						"{{LIVE URL}}remindtoday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Yesterday Special Day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}yesspecialday",
+					"host": [
+						"{{LIVE URL}}yesspecialday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remainder Memory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}memory",
+					"host": [
+						"{{LIVE URL}}memory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment / Reply Blocked",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}blockcomment",
+					"host": [
+						"{{LIVE URL}}blockcomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thanks to Comment Whom Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}blockcommentthanks",
+					"host": [
+						"{{LIVE URL}}blockcommentthanks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document Last Activity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}docsactivity",
+					"host": [
+						"{{LIVE URL}}docsactivity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document Delete Approved",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}docdeleteapprov",
+					"host": [
+						"{{LIVE URL}}docdeleteapprov"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Verification Pending",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}nomineeverification",
+					"host": [
+						"{{LIVE URL}}nomineeverification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nominee Document Mapped Pending",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}docmappending",
+					"host": [
+						"{{LIVE URL}}docmappending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Times Flies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}timesflies",
+					"host": [
+						"{{LIVE URL}}timesflies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document Mapped",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}docmapped",
+					"host": [
+						"{{LIVE URL}}docmapped"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post  Reply / Comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}postreply",
+					"host": [
+						"{{LIVE URL}}postreply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Fav Topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}postfavtopic",
+					"host": [
+						"{{LIVE URL}}postfavtopic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post View",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}post/view/44",
+					"host": [
+						"{{LIVE URL}}post"
+					],
+					"path": [
+						"view",
+						"44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}getnotification?index=0&count=10",
+					"host": [
+						"{{LIVE URL}}getnotification"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}readall",
+					"host": [
+						"{{LIVE URL}}readall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Package List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}package/list",
+					"host": [
+						"{{LIVE URL}}package"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Packages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{LIVE URL}}user/package",
+					"host": [
+						"{{LIVE URL}}user"
+					],
+					"path": [
+						"package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Package Purchase",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "package",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "addonpackage",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}package/purchase",
+					"host": [
+						"{{LIVE URL}}package"
+					],
+					"path": [
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verification Resend OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "108",
+							"type": "text"
+						},
+						{
+							"key": "social_id",
+							"value": "7897897897834534",
+							"type": "text"
+						},
+						{
+							"key": "mobileno",
+							"value": "7878787878",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{LIVE URL}}resetpassword",
+					"host": [
+						"{{LIVE URL}}resetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Expired Package",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LIVE URL}}user/expiredpackge",
+					"host": [
+						"{{LIVE URL}}user"
+					],
+					"path": [
+						"expiredpackge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PAY Response",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LIVE TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.mukthi.life/admin/pay_response?test=asdfasdfasdf",
+					"protocol": "https",
+					"host": [
+						"www",
+						"mukthi",
+						"life"
+					],
+					"path": [
+						"admin",
+						"pay_response"
+					],
+					"query": [
+						{
+							"key": "test",
+							"value": "asdfasdfasdf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

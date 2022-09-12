@@ -1,0 +1,928 @@
+{
+	"info": {
+		"_postman_id": "b25f31f4-d2d1-4e00-a9fe-c5de47dc0f43",
+		"name": "SECURITY MONITERING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "priyanka",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "demo1234",
+							"type": "text"
+						},
+						{
+							"key": "site_code",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Feeds",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_id",
+							"value": "nithik",
+							"type": "text"
+						},
+						{
+							"key": "feedId",
+							"type": "file",
+							"src": "/C:/Users/NITHIK/Downloads/2021 Honda CB350 RS.jpg"
+						},
+						{
+							"key": "feedName",
+							"value": "TN49 BA 6618",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "license_plate_number",
+							"value": "chennai",
+							"type": "text"
+						},
+						{
+							"key": "locationId",
+							"value": "fdfds",
+							"type": "text"
+						},
+						{
+							"key": "locationName",
+							"value": "12:00:00",
+							"type": "text"
+						},
+						{
+							"key": "object_classification",
+							"value": "AM",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "uiType",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/store_feed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store_feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/view_role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"view_role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "role_name",
+							"value": "Administrator",
+							"type": "text"
+						},
+						{
+							"key": "role_permission",
+							"value": "{\"visitors\":0,\"users\":0,\"track_cctv\":1,\"manage_cctv\":0,\"entry\":0,\"locations\":1,\"roles\":1}",
+							"type": "text"
+						},
+						{
+							"key": "total_in_hour",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/store_role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"store_role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "role_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "role_name",
+							"value": "System Admin",
+							"type": "text"
+						},
+						{
+							"key": "role_permission",
+							"value": "{\"visitors\":0,\"users\":0,\"track_cctv\":1,\"manage_cctv\":0,\"entry\":0,\"locations\":1,\"roles\":1}",
+							"type": "text"
+						},
+						{
+							"key": "total_in_hour",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/update_role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"update_role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/delete_role/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"delete_role",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/view_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"view_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Priyanka",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "priyanka",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "nithik",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "demo1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "7373852822",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "prinku.priyanka@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/C:/Users/NITHIK/Downloads/Untitled.png"
+						},
+						{
+							"key": "site_code",
+							"value": "CHENNAI_01",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/store_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"store_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "priyanka",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "kalimuthu",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "demo1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "7373852812",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "priyanka@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/C:/Users/NITHIK/Downloads/1743y0tsIGfH0.JPG"
+						},
+						{
+							"key": "site_code",
+							"value": "MADURAI_01",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/update_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"update_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/user_status/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"user_status",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/delete_user/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"delete_user",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Visitors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/view_visitor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"view_visitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Visitor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "vehicle_no",
+							"value": "TN 45 BA 6618",
+							"type": "text"
+						},
+						{
+							"key": "mobile_no",
+							"value": "7378854866",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Mahesh",
+							"type": "text"
+						},
+						{
+							"key": "IC_number",
+							"value": "4878452512",
+							"type": "text"
+						},
+						{
+							"key": "contact_person",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "purpose_of_visit",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/store_visitor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"store_visitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Purpose",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/view_purpose",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"view_purpose"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Purpose of visit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "purpose_name",
+							"value": "Delivery",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/store_purpose",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"store_purpose"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WebHook Store Location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "header",
+							"value": "04d854693d4ec24639d3af8d10ae7bd99ea8abac4c272fb3e21fc1a0c4bb6f651ce0404ea6b7c8e6f0b1f8a9d198a1025bfb1f620d63b29eb02459378a2edeb6e7601777a25e0945a48607e35e0585799e8bad177cdf35a98e4d599cfe59bdc815386f678da5794a0c8cb47a0478006374abce701259a80a0d09be32b5347a28ce6f5a93b09db9daeae79cbde84a9b24b91a5ba8ed9c84a68b340e237816a6ed218dc4d758bd25a22b9d51b89ff33c79626fd45293a6f3e94c1faa3afe8e944518f03bd05b2fb9c0019b54744802c7c1c53e81f89fee940d0f499a9ccc818a96e9ae4ce15f19351f0b4514aa340eeeb743546201fd49ad01ab19222d3d689890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/store_gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"store_gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WebHook Store Gateway",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "header",
+							"value": "04d854693d4ec24639d3af8d10ae7bd99ea8abac4c272fb3e21fc1a0c4bb6f651ce0404ea6b7c8e6f0b1f8a9d198a1025bfb1f620d63b29eb02459378a2edeb6e7601777a25e0945a48607e35e0585799e8bad177cdf35a98e4d599cfe59bdc815386f678da5794a0c8cb47a0478006374abce701259a80a0d09be32b5347a28ce6f5a93b09db9daeae79cbde84a9b24b91a5ba8ed9c84a68b340e237816a6ed218dc4d758bd25a22b9d51b89ff33c79626fd45293a6f3e94c1faa3afe8e944518f03bd05b2fb9c0019b54744802c7c1c53e81f89fee940d0f499a9ccc818a96e9ae4ce15f19351f0b4514aa340eeeb743546201fd49ad01ab19222d3d689890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/store_gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"store_gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/view_location",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"view_location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Gateway",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LOCAL TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/security_monitoring/api/admin/view_gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"security_monitoring",
+						"api",
+						"admin",
+						"view_gateway"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
